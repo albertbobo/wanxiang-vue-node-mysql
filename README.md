@@ -5,6 +5,7 @@
 ## 技术栈
 
 前端：vue2.6.10、vue-cli3.7.0、vuex、vue-router、webpack、axios、element-ui
+
 后端：node、express、mysql
 
 ## 项目运行
@@ -25,4 +26,3 @@ cd server
 nodemon app
 
 ```
-
