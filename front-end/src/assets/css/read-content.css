@@ -1,0 +1,173 @@
+/*悦读*/
+/*右侧内容*/
+.read-right {
+    float: right;
+    width: 77%;
+}
+
+@media screen and (max-width: 991px) {
+    .read-right {
+        width: 77.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .read-right {
+        width: 100%;
+    }
+}
+
+/*文章正文*/
+.read-content-wrapper {
+    margin-top: 2%;
+}
+
+.read-content-list li {
+    position: relative;
+    padding: 2% 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.read-content-list li:not(:last-of-type) {
+    margin-bottom: 2%;
+}
+
+.text-title {
+    margin: 2% 0 1% 0;
+    font-family: "SHS-H", sans-serif;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 991px) {
+    .text-title {
+        font-size: 1.6rem;
+    }
+}
+
+.read-content {
+    margin-bottom: 1.5%;
+    text-align: justify;
+}
+
+.read-img-small {
+    display: none;
+    float: left;
+    width: 24%;
+    height: 0;
+    padding-bottom: 13.2%;
+    margin: 6px 15px 0 0;
+    overflow: hidden;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1199px) {
+    .read-img-small {
+        padding-bottom: 15.6%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .read-img-small {
+        width: 23%;
+        padding-bottom: 16%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .read-img-small {
+        width: 28%;
+        padding-bottom: 18%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .read-img-small {
+        width: 40%;
+        padding-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .read-img-small {
+        width: 45%;
+        padding-bottom: 27%;
+    }
+}
+
+.read-img-small img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.read-content-part span {
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 991px) {
+    .read-content-part span {
+        font-size: 1.4rem;
+    }
+}
+
+.btn-read-all {
+    font-size: 1.4rem;
+    color: #a6a385;
+    letter-spacing: .05em;
+    transition: color .3s;
+}
+
+.btn-read-all:hover {
+    color: #e3ce07;
+}
+
+.btn-read-all i, .btn-read-collapse i {
+    margin-left: 5px;
+}
+
+/*全文*/
+.read-content-all {
+    display: none;
+}
+
+.read-content-all img {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.read-content-all p {
+    line-height: 1.8;
+    margin-bottom: .8em;
+}
+
+@media screen and (max-width: 991px) {
+    .read-content-all p {
+        font-size: 1.4rem;
+    }
+}
+
+.btn-read-collapse {
+    float: right;
+    letter-spacing: 1px;
+    padding: 3px 8px 4px 8px;
+    background-color: #a6a385;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    transition: background-color .3s;
+}
+
+.btn-read-collapse:hover {
+    background-color: #e3ce07;
+}
+
+.read-wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*end 全文*/
+/*end 文章正文*/
+/*end 右侧内容*/
+/*end 悦读*/

@@ -1,0 +1,1374 @@
+/*用户中心*/
+.my-card-wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.my-card-wrapper {
+    position: relative;
+}
+
+/*封面图片*/
+.upload-picture-input {
+    display: none;
+}
+
+.btn-upload-cover {
+    z-index: 9;
+    position: absolute;
+    right: 15px;
+    top: 5%;
+    padding: 5px 13px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.4rem;
+    transition: background-color .3s;
+}
+
+
+@media screen and (max-width: 640px) {
+    .btn-upload-cover {
+        padding: 4px 10px;
+    }
+
+    .btn-upload-cover span {
+        display: inline-block;
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.btn-upload-cover:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.btn-upload-cover i {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 640px) {
+    .btn-upload-cover i {
+        margin-right: 0;
+        transform: scale(.92);
+    }
+}
+
+.my-cover {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 25%;
+    overflow: hidden;
+    background-color: #999;
+}
+
+.my-cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*end 封面图片*/
+
+.my-info-wrapper {
+    position: relative;
+    padding-bottom: 2%;
+}
+
+/*头像*/
+.my-profile-wrapper {
+    float: left;
+    position: relative;
+    width: 15%;
+    height: 15%;
+    margin: -5% 0 0 5%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    background-color: #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .my-profile-wrapper {
+        width: 18%;
+        height: 18%;
+        border: 3px solid #fff;
+        border-radius: 3px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .my-profile-wrapper {
+        width: 20%;
+        height: 20%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .my-profile-wrapper {
+        float: unset;
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+}
+
+.my-profile-img {
+    width: 100%;
+}
+
+.upload-profile-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.my-profile-wrapper:hover .upload-profile-mask {
+    opacity: 1;
+}
+
+.upload-profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.upload-profile i {
+    font-size: 2rem;
+}
+
+.upload-profile span {
+    display: block;
+    margin-top: 8%;
+}
+
+@media screen and (max-width: 991px) {
+    .upload-profile i {
+        font-size: 1.8rem;
+    }
+
+    .upload-profile span {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .upload-profile i {
+        font-size: 1.6rem;
+    }
+
+    .upload-profile span {
+        margin-top: 4%;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        -webkit-transform: scale(.92);
+    }
+}
+
+/*end 头像*/
+
+/*个人信息*/
+.my-info {
+    float: left;
+    width: 47%;
+    padding: 2% 3% 0 3%;
+    text-align: justify;
+}
+
+@media screen and (max-width: 640px) {
+    .my-info {
+        float: unset;
+        width: 100%;
+        padding: 3% 5% 0 5%;
+        line-height: 1.6;
+        box-sizing: border-box;
+    }
+}
+
+.my-username {
+    font-family: "SHS-H", sans-serif;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 991px) {
+    .my-username {
+        font-size: 1.6rem;
+    }
+
+    .my-introduction {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .my-username {
+        font-size: 1.5rem;
+    }
+}
+
+.my-introduction {
+    margin-top: 2%;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 640px) {
+    .my-introduction {
+        margin-top: 1%;
+    }
+}
+
+/*end 个人信息*/
+
+/*编辑个人资料*/
+.btn-edit-info {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    display: block;
+    padding: 5px 13px;
+    border: 1px solid #e3ce07;
+    color: #e3ce07;
+    font-size: 1.4rem;
+    transform: translateY(-50%);
+    transition: background-color .3s;
+}
+
+.btn-edit-info:hover {
+    background-color: rgba(227, 206, 7, .15);
+}
+
+@media screen and (max-width: 640px) {
+    .btn-edit-info {
+        top: 30%;
+        padding: 3px 10px;
+    }
+
+    .btn-edit-info span {
+        display: inline-block;
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.profile-edit-mask {
+    opacity: 1;
+}
+
+.btn-comeback-my {
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    color: #969696;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 640px) {
+    .btn-comeback-my {
+        display: inline-block;
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.edit-my-info {
+    float: left;
+    width: 47%;
+    padding: 20px 3% 0 3%;
+}
+
+@media screen and (max-width: 991px) {
+    .edit-my-info {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .btn-comeback-my {
+        top: 10%;
+    }
+
+    .edit-my-info {
+        float: unset;
+        width: 100%;
+        padding: 5% 5% 0 5%;
+        box-sizing: border-box;
+    }
+}
+
+.edit-my-info label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.edit-my-info label span:first-of-type {
+    display: inline-block;
+    width: 55px;
+    font-size: 1.6rem;
+    font-family: "SHS-H", sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+    .edit-my-info label span:first-of-type {
+        width: 52px;
+        font-size: 1.5rem;
+    }
+}
+
+.edit-my-info label input {
+    width: calc(100% - 60px);
+    padding-bottom: 5px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    box-sizing: border-box;
+}
+
+.edit-my-info label a {
+    color: #a6a385;
+}
+
+@media screen and (max-width: 991px) {
+    .edit-my-info label input {
+        padding-bottom: 3px;
+        font-size: 1.4rem;
+    }
+
+    .edit-my-info label a {
+        font-size: 1.4rem;
+    }
+}
+
+.edit-my-email {
+    margin-right: 5px;
+    letter-spacing: .02rem;
+}
+
+.btn-submit-info {
+    display: block;
+    width: 62px;
+    height: 33px;
+    line-height: 33px;
+    margin-top: 5%;
+    background-color: #e3ce07;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*end 编辑个人资料*/
+/*end 用户中心*/
+
+/*我的收藏*/
+.my-mark-wrapper {
+    margin: 2% 0;
+}
+
+.mark-tabs-wrapper {
+    float: left;
+    width: 20%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+@media screen and (max-width: 640px) {
+    .mark-tabs-wrapper {
+        width: 100%;
+    }
+}
+
+.mark-title {
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-family: "SHS-H", sans-serif;
+    font-size: 1.6rem;
+    background-color: #e3ce07;
+    color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+    .mark-title {
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+.mark-title-icon {
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 991px) {
+    .mark-title-icon {
+        margin-right: 0;
+        transform: scale(.9);
+    }
+}
+
+.mark-title span {
+    letter-spacing: 1px;
+}
+
+/*tabs*/
+.mark-list li {
+    position: relative;
+    height: 66px;
+    padding: 0 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px) {
+    .mark-list li {
+        float: left;
+        width: 25%;
+        height: 55px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mark-list li {
+        width: 50%;
+    }
+
+    .mark-list li:first-of-type, .mark-list li:nth-of-type(2) {
+        border-bottom: 1px dashed #ccc;
+    }
+}
+
+.mark-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 991px) {
+    .mark-list li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .mark-list li a {
+        letter-spacing: 2px;
+    }
+}
+
+.mark-list li:not(:last-of-type) a {
+    border-bottom: 1px dashed #ccc;
+}
+
+@media screen and (max-width: 640px) {
+    .mark-list li:not(:last-of-type) a {
+        border-right: 1px dashed #ccc;
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mark-list li:nth-of-type(2) a {
+        border-right: none;
+    }
+}
+
+.mark-tab-img {
+    position: relative;
+    top: 12px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 640px) {
+    .mark-tab-img {
+        top: -4px;
+        margin-right: 0;
+        transform: scale(.9);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .mark-tab-img img {
+        transform: scale(.9);
+    }
+}
+
+.mark-tab-img img:first-of-type {
+    z-index: 2;
+    position: relative;
+}
+
+.mark-tab-img img:nth-of-type(2) {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.mark-list li a:hover .mark-tab-img img:nth-of-type(2),
+.mark-list li.current a .mark-tab-img img:nth-of-type(2) {
+    opacity: 1;
+}
+
+.mark-list li a span {
+    position: relative;
+    top: 50%;
+    display: inline-block;
+    vertical-align: top;
+    transform: translateY(-50%);
+}
+
+/*end tabs*/
+
+/*收藏右侧*/
+.mark-content-wrapper {
+    float: right;
+    width: 77%;
+}
+
+@media screen and (max-width: 991px) {
+    .mark-content-wrapper {
+        width: 77.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .mark-content-wrapper {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+.mark-others-list {
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.mark-others-list li {
+    position: relative;
+    padding: 1.5% 0;
+}
+
+.mark-others-list li:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+
+.mark-others-list li span {
+    color: #969696;
+}
+
+.mark-others-list li .bookMark {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.mark-list-headline {
+    width: 90%;
+    margin-top: .8%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mark-list-headline a {
+    transition: color .3s;
+}
+
+.mark-list-headline a:hover {
+    color: #a6a385;
+}
+
+@media screen and (max-width: 991px) {
+    .mark-list-headline a {
+        font-size: 1.4rem;
+    }
+}
+
+.mark-nothing {
+    padding: 3% 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+/*end 收藏右侧*/
+/*end 我的收藏*/
+
+/*登录*/
+.login-wrapper {
+    background-color: #fff;
+    padding-bottom: 8%;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.login-top {
+    position: relative;
+    height: 115px;
+    padding-top: 1.8%;
+    background-color: #e3ce07;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-img {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login-img img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-top span {
+    font-family: "SHS-H", sans-serif;
+    font-size: 2.4rem;
+    color: #000;
+    letter-spacing: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+    .login-top {
+        height: 105px;
+    }
+
+    .login-img {
+        top: 52px;
+    }
+
+    .login-top span {
+        font-size: 2.2rem;
+        letter-spacing: 6px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .login-top {
+        height: 95px;
+    }
+
+    .login-img {
+        top: 47px;
+    }
+
+    .login-img img {
+        width: 90%;
+    }
+
+    .login-top span {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .login-top {
+        height: 85px;
+    }
+
+    .login-img {
+        top: 42px;
+    }
+
+    .login-img img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .login-top {
+        height: 80px;
+    }
+
+    .login-img {
+        top: 40px;
+    }
+
+    .login-img img {
+        width: 75%;
+    }
+}
+
+/*登录表单*/
+.form-content-wrapper {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.login-content-wrapper {
+    margin: 8% auto 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+    .form-content-wrapper {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .form-content-wrapper {
+        width: 45%;
+    }
+
+    .login-content-wrapper {
+        margin: 9% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .form-content-wrapper {
+        width: 50%;
+    }
+
+    .login-content-wrapper {
+        margin: 10% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .form-content-wrapper {
+        width: 60%;
+    }
+
+    .login-content-wrapper {
+        margin: 11% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form-content-wrapper {
+        width: 65%;
+    }
+
+    .login-content-wrapper {
+        margin: 12% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .form-content-wrapper {
+        width: 70%;
+    }
+
+    .login-content-wrapper {
+        margin: 13% auto 0 auto;
+    }
+}
+
+.login-form {
+    margin-bottom: 10%;
+}
+
+.login-form label {
+    position: relative;
+    display: block;
+}
+
+.login-form label:not(:last-of-type) {
+    margin-bottom: 10%;
+}
+
+.input-msg {
+    position: absolute;
+    left: 3px;
+    top: 28px;
+    width: 100%;
+    color: #d77000;
+    font-size: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+    .input-msg {
+        font-size: 1.2rem;
+    }
+}
+
+.login-form input {
+    width: 100%;
+    padding: 3px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .login-form input {
+        font-size: 1.4rem;
+    }
+}
+
+.login-form input[type="text"] {
+    letter-spacing: .05rem;
+}
+
+.login-form input[type="password"] {
+    padding: 3px 0;
+    letter-spacing: -5px;
+}
+
+.login-form input::-webkit-input-placeholder {
+    color: #969696;
+    letter-spacing: 1px;
+}
+
+.login-form input::-moz-placeholder {
+    color: #969696;
+    letter-spacing: 1px;
+}
+
+.login-form input:-moz-placeholder {
+    color: #969696;
+    letter-spacing: 1px;
+}
+
+.login-form input:-ms-input-placeholder {
+    color: #969696;
+    letter-spacing: 1px;
+}
+
+.login-form input[type="password"]::-webkit-input-placeholder {
+    padding: 0 3px;
+}
+
+.login-form input[type="password"]::-moz-placeholder {
+    padding: 0 3px;
+}
+
+.login-form input[type="password"]:-moz-placeholder {
+    padding: 0 3px;
+}
+
+.login-form input[type="password"]:-ms-input-placeholder {
+    padding: 0 3px;
+}
+
+.login-btn {
+    width: 82%;
+    margin: 10% auto 0 auto;
+    text-align: right;
+}
+
+.forget-pwd {
+    position: relative;
+    right: -12px;
+    display: block;
+    margin-bottom: 6%;
+    font-size: 1.3rem;
+    color: #aaa;
+    -webkit-transform: scale(.95);
+    transition: color .3s;
+}
+
+@media screen and (max-width: 991px) {
+    .forget-pwd {
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.forget-pwd:hover {
+    color: #a6a385;
+}
+
+.btn-form {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20%;
+    border: none;
+    background-color: #e3ce07;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn-form:hover {
+    background-color: #a6a385;
+}
+
+@media screen and (max-width: 1199px) {
+    .btn-form {
+        height: 38px;
+        line-height: 38px;
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .btn-form {
+        height: 36px;
+        line-height: 36px;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-form {
+        height: 34px;
+        line-height: 34px;
+        font-size: 1.5rem;
+    }
+}
+
+.btn-login-submit {
+    margin-top: 0;
+}
+
+/*end 登录表单*/
+
+/*第三方登录*/
+.others-login {
+    text-align: center;
+}
+
+.others-login span {
+    display: block;
+    font-size: 1.3rem;
+    color: #aaa;
+    -webkit-transform: scale(.95);
+}
+
+@media screen and (max-width: 991px) {
+    .others-login span {
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.others-login-title {
+    position: relative;
+}
+
+.others-login-title:before, .others-login-title:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 32%;
+    border-top: 1px dashed #aaa;
+}
+
+.others-login-title:before {
+    left: 0;
+}
+
+.others-login-title:after {
+    right: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .others-login-title:before, .others-login-title:after {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .others-login-title:before, .others-login-title:after {
+        width: 25%;
+    }
+}
+
+.btn-wechat {
+    display: block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #2ba245;
+    margin: 5% auto;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .btn-wechat {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-wechat {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .btn-wechat {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.6rem;
+    }
+}
+
+.login-goto {
+    margin-top: 12%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.login-goto a {
+    color: #e3ce07;
+    font-size: 1.4rem;
+}
+
+/*end 第三方登录*/
+/*end 登录*/
+
+/*注册*/
+.reg-code {
+    position: relative;
+}
+
+.send-code {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    color: #aaa;
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+    cursor: pointer;
+    -webkit-transform: scale(.95);
+    transition: color .3s;
+}
+
+.send-code:hover {
+    color: #e3ce07;
+}
+
+@media screen and (max-width: 991px) {
+    .send-code {
+        font-size: 1.2rem;
+    }
+}
+
+/*end 注册*/
+
+/*找回密码*/
+.edit-wrapper {
+    padding-bottom: 8%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.edit-top-wrapper {
+    padding: 0 15px;
+}
+
+.edit-top {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.edit-top span, .edit-top a {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 991px) {
+    .edit-top {
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .edit-top span, .edit-top a {
+        font-size: 1.3rem;
+        -webkit-transform: scale(.95);
+    }
+}
+
+.edit-top a {
+    font-family: "SHS-H", sans-serif;
+    transition: color .3s;
+}
+
+.edit-top a:hover {
+    color: #a6a385;
+}
+
+.find-pwd-step {
+    margin: 6% 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .find-pwd-step {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .find-pwd-step {
+        margin: 7% 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .find-pwd-step {
+        margin: 8% 0;
+    }
+}
+
+.find-pwd-step li {
+    display: inline-block;
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.pwd-step1 {
+    color: #e3ce07;
+}
+
+.find-pwd-step li:nth-of-type(2), .find-pwd-step li:nth-of-type(4) {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .find-pwd-step li {
+        margin: 0 3px;
+    }
+
+    .find-pwd-step li:nth-of-type(2), .find-pwd-step li:nth-of-type(4) {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .find-pwd-step li {
+        margin: 0 2px;
+    }
+
+    .find-pwd-step li:nth-of-type(2), .find-pwd-step li:nth-of-type(4) {
+        width: 6%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .find-pwd-step li:nth-of-type(2), .find-pwd-step li:nth-of-type(4) {
+        width: 5%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .find-pwd-step li {
+        margin: 0;
+    }
+
+    .find-pwd-step li:nth-of-type(2), .find-pwd-step li:nth-of-type(4) {
+        width: 3%;
+    }
+}
+
+.icon-finish {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    line-height: 70px;
+    text-align: center;
+    background-color: #4bc33a;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 3.6rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .icon-finish {
+        width: 66px;
+        height: 66px;
+        line-height: 66px;
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .icon-finish {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .icon-finish {
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .icon-finish {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 2.4rem;
+    }
+}
+
+.icon-finish i {
+    position: relative;
+    top: -2px;
+}
+
+.text-finish {
+    margin: 5% 0 13% 0;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 991px) {
+    .text-finish {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .text-finish {
+        margin: 5% 0 11% 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .text-finish {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .text-finish {
+        margin: 5% 0 10% 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .text-finish {
+        margin: 4% 0 9% 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .text-finish {
+        margin: 4% 0 8% 0;
+    }
+}
+
+.back-login {
+    position: relative;
+    top: 15px;
+    text-align: center;
+}
+
+.back-login span {
+    display: inline-block;
+    font-size: 1.3rem;
+    -webkit-transform: scale(.95);
+}
+
+@media screen and (max-width: 640px) {
+    .back-login span {
+        font-size: 1.2rem;
+        -webkit-transform: scale(.92);
+    }
+}
+
+.re-login {
+    margin: 0 auto;
+}
+
+/*end 找回密码*/
+
+/*修改邮箱*/
+.edit-email-first, .edit-email-next, .edit-pwd-form {
+    margin-top: 20%;
+}
+
+.input-code {
+    margin-bottom: 15%;
+}
+
+.input-code p:first-of-type {
+    font-size: 1.7rem;
+}
+
+.input-code p:nth-of-type(2) {
+    margin-top: 6px;
+    line-height: 1.3;
+    color: #969696;
+}
+
+@media screen and (max-width: 991px) {
+    .input-code p:first-of-type {
+        font-size: 1.6rem;
+    }
+
+    .input-code p:nth-of-type(2) {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .edit-email-first, .edit-email-next, .edit-pwd-form {
+        margin-top: 18%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .edit-email-first, .edit-email-next, .edit-pwd-form {
+        margin-top: 15%;
+    }
+
+    .input-code {
+        margin-bottom: 12%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .input-code p:first-of-type {
+        font-size: 1.5rem;
+    }
+}
+
+/*end 修改邮箱*/

@@ -1,0 +1,299 @@
+/*视界，探索*/
+.video-left, .explore-left {
+    float: left;
+    width: 62%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+@media screen and (max-width: 767px) {
+    .video-left, .explore-left {
+        width: 57%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video-left, .explore-left {
+        width: 100%;
+    }
+}
+
+.video-left-top, .explore-left-top {
+    position: relative;
+    padding: 2% 15px;
+}
+
+.video-play {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video-play video {
+    width: 100%;
+    outline: none;
+}
+
+.video-left-bottom, .explore-left-bottom {
+    padding: 0 15px 2% 15px;
+}
+
+.video-summary {
+    padding: 4% 15px;
+}
+
+.video-summary p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.video-summary p:not(:last-of-type) {
+    margin-bottom: .5em;
+}
+
+@media screen and (max-width: 991px) {
+    .video-summary p {
+        font-size: 1.4rem;
+    }
+}
+
+/*视频列表，探索列表*/
+.video-right, .explore-right {
+    float: right;
+    width: 35%;
+    padding: 0 15px;
+    background-color: #fff;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px #ddd;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .video-right, .explore-right {
+        width: 35.5%;
+    }
+}
+
+.explore-right {
+    max-height: 650px;
+}
+
+@media screen and (max-width: 767px) {
+    .video-right, .explore-right {
+        width: 41.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video-right, .explore-right {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+.video-list li, .explore-list li {
+    position: relative;
+    padding: 3% 0;
+    border-top: 1px dashed #ccc;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 767px) {
+    .video-list li, .explore-list li {
+        padding: 4% 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video-list li, .explore-list li {
+        padding: 2% 0;
+    }
+}
+
+.video-list li:before, .explore-list li:before {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 0;
+    height: 100%;
+    transition: width .3s;
+}
+
+.video-list li:hover:before, .video-list li.current:before,
+.explore-list li:hover:before, .explore-list li.current:before {
+    width: calc(100% + 30px);
+    background-color: #a6a385;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+.video-list li .video-img, .explore-list li .explore-img {
+    z-index: 9;
+    position: relative;
+    width: 30%;
+    height: 0;
+    padding-bottom: 22%;
+    background-color: #ccc;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+    .video-list li .video-img, .explore-list li .explore-img {
+        width: 20%;
+        padding-bottom: 13%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-list li .video-img, .explore-list li .explore-img {
+        width: 25%;
+        padding-bottom: 16%;
+    }
+}
+
+.video-img img, .explore-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*播放图标*/
+.video-img i {
+    position: relative;
+    top: 4px;
+    color: #fff;
+    font-size: 3rem;
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+.video-list li:hover .video-img i, .video-list li.current .video-img i {
+    opacity: 1;
+}
+
+.video-list li.current .video-img i {
+    display: none;
+}
+
+@media screen and (max-width: 1199px) {
+    .video-img i {
+        top: 2px;
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .video-img i {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .video-img i {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video-img i {
+        top: 4px;
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .video-img i {
+        top: 2px;
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .video-img i {
+        top: 1px;
+        font-size: 2rem;
+    }
+}
+
+/*end 播放图标*/
+
+.video-list-content, .explore-list-content {
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 66%;
+    transform: translateY(-50%);
+    transition: color .3s;
+}
+
+@media screen and (max-width: 640px) {
+    .video-list-content, .explore-list-content {
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-list-content, .explore-list-content {
+        width: 72%;
+    }
+}
+
+.video-list li.current:hover,
+.explore-list li.current:hover {
+    cursor: unset;
+}
+
+.video-list li:hover .video-list-content, .video-list li.current .video-list-content,
+.explore-list li:hover .explore-list-content, .explore-list li.current .explore-list-content {
+    color: #fff;
+}
+
+.video-list-title, .explore-list-title {
+    display: block;
+    margin-top: 3%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+    .video-list-title, .explore-list-title {
+        margin-top: 1%;
+        font-size: 1.4rem;
+    }
+}
+
+/*end 视频列表，探索列表*/
+
+.explore-content-wrapper {
+    padding: 0 15px;
+}
+
+.explore-content {
+    padding: 3% 0;
+    border-top: 1px dashed #ccc;
+}
+
+.explore-content p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: .8em;
+}
+
+@media screen and (max-width: 991px) {
+    .explore-content p {
+        font-size: 1.4rem;
+    }
+}
+
+.explore-content img {
+    display: block;
+    width: 100%;
+}
+
+/*end 视界，探索*/

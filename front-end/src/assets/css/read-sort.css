@@ -1,0 +1,118 @@
+/*悦读*/
+/*排序方式*/
+.read-sort {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .read-sort {
+        margin-top: 2%;
+    }
+}
+
+.read-sort-title {
+    float: left;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px #ddd;
+}
+
+.read-sort-content {
+    float: left;
+    position: relative;
+    width: 100px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.btn-read-sort {
+    height: 30px;
+    line-height: 30px;
+    background-color: #e3ce07;
+    text-align: center;
+    box-shadow: 0 1px 2px #ddd;
+    cursor: pointer;
+}
+
+.read-sort-content i {
+    margin: 0 5px;
+}
+
+.read-sort-list {
+    z-index: 99;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 8px;
+    background-color: #a6a385;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.read-sort-list li {
+    position: relative;
+}
+
+.read-sort-list li:not(:last-of-type) {
+    border-bottom: 1px dashed rgba(255, 255, 255, .3);
+}
+
+.read-sort-list li:before {
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    content: "";
+    width: 0;
+    height: 30px;
+    background: url("../imgs/read-sort-hover.png") no-repeat left;
+    transition: width .3s ease-out;
+}
+
+.read-sort-list li:hover:before, .read-sort-list .current:before {
+    width: 100%;
+}
+
+.sort-option {
+    z-index: 9;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 8% 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.color-transparent {
+    color: transparent;
+}
+
+.btn-read-sort .fa-angle-down {
+    position: relative;
+    top: 1px;
+    width: 12px;
+    height: 18px;
+    font-size: 1.8rem;
+}
+
+.angle-rotate, .angle-rotate2 {
+    transform-origin: center;
+    transition: transform .2s;
+}
+
+.angle-rotate {
+    transform: rotate(180deg);
+}
+
+.angle-rotate2 {
+    transform: rotate(0deg);
+}
+
+/*end 排序方式*/
+/*end 悦读*/

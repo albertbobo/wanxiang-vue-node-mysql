@@ -1,0 +1,95 @@
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 10÷16=62.5% */
+}
+
+fieldset, img {
+    border: 0 none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto \9; /* ie8 */
+}
+
+.video embed, .video object, .video iframe {
+    width: 100%;
+    height: auto;
+}
+
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+
+input, select, textarea {
+    vertical-align: middle;
+    outline: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    border: 0 none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+body, th, td, input, select, textarea, button {
+    font-family: "Microsoft YaHei", "Arial", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    font-family: "Microsoft YaHei", "Arial", sans-serif;
+    color: #000;
+    cursor: pointer;
+}
+
+a:active, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+select, input[type="search"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+}

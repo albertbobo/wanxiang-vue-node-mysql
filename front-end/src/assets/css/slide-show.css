@@ -1,0 +1,198 @@
+/*banner*/
+@media screen and (max-width: 640px) {
+    .banner {
+        margin-top: -15px;
+    }
+}
+
+/*分页器*/
+.swiper-pagination {
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+    box-sizing: border-box;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+    border: none;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 4px;
+    }
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    height: 25px;
+    bottom: 0;
+    background-color: #555;
+}
+
+/*end 分页器*/
+
+/*切换按钮*/
+.swiper-button-prev.swiper-button-white, .swiper-button-next.swiper-button-white {
+    outline: none;
+    opacity: .75;
+    transition: opacity .3s;
+}
+
+.swiper-button-prev.swiper-button-white:hover, .swiper-button-next.swiper-button-white:hover {
+    opacity: 1;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    background-size: 80% auto;
+}
+
+@media screen and (max-width: 767px) {
+    .swiper-button-prev, .swiper-button-next {
+        background-size: 70% auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .swiper-button-prev, .swiper-button-next {
+        background-size: 65% auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .swiper-button-prev, .swiper-button-next {
+        background-size: 55% auto;
+    }
+}
+
+/*end 切换按钮*/
+
+.banner-wrapper {
+    position: relative;
+    background-color: #ddd;
+}
+
+/*日期*/
+.banner-date {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    padding: 2%;
+    background: url("../imgs/bg-date.png") repeat;
+    text-align: center;
+    font-family: "Audimat Mono", sans-serif;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+.banner-date .date-dmy {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.date-day {
+    font-size: 4.6rem;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-date {
+        width: 22%;
+        font-size: 1.8rem;
+    }
+
+    .date-day {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-date {
+        padding: 1.5%;
+        font-size: 1.7rem;
+    }
+
+    .date-day {
+        font-size: 3.8rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .banner-date {
+        width: 18%;
+        font-size: 1.6rem;
+    }
+
+    .date-day {
+        display: block;
+        font-size: 3.6rem;
+    }
+
+    .date-slash {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .banner-date {
+        font-size: 1.5rem;
+        letter-spacing: -.5px;
+    }
+
+    .date-day {
+        font-size: 3.4rem;
+        letter-spacing: 0;
+    }
+}
+
+/*end 日期*/
+
+/*名言*/
+.banner-sentence {
+    float: right;
+    width: 80%;
+    line-height: 1.5;
+    padding: 2.5% 15px;
+    text-align: right;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-sentence {
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .banner-sentence {
+        width: 82%;
+    }
+}
+
+.banner .saying {
+    margin-bottom: 5px;
+}
+
+.banner .saying i {
+    margin-right: 5px;
+}
+
+.banner .author {
+    font-style: italic;
+    color: #969696;
+}
+
+/*end 名言*
+/*end banner*/

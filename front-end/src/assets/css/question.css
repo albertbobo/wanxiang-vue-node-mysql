@@ -1,0 +1,326 @@
+/*问答*/
+.ask-wrapper {
+    padding-bottom: 3%;
+}
+
+.question-left {
+    position: relative;
+    float: left;
+    width: 71%;
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .question-left {
+        width: 68%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .question-left {
+        width: 100%;
+    }
+}
+
+.question-left-top {
+    padding-top: 2%;
+}
+
+.questioner {
+    margin-top: 1.5%;
+    font-size: 1.4rem;
+}
+
+.questioner-id, .respondent-id {
+    margin-right: 5px;
+    font-style: italic;
+}
+
+.question-title {
+    margin: 1.5% 0;
+    font-family: "SHS-H", sans-serif;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 991px) {
+    .question-about {
+        font-size: 1.4rem;
+    }
+}
+
+.answer-wrapper {
+    padding: 3% 0 2% 0;
+    border-top: 1px dashed #ccc;
+}
+
+.respondent {
+    margin-bottom: 1%;
+    font-size: 1.4rem;
+}
+
+.answer-wrapper p {
+    margin-bottom: .8em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+@media screen and (max-width: 991px) {
+    .answer-wrapper p {
+        font-size: 1.4rem;
+    }
+}
+
+.question-left-bottom {
+    padding-bottom: 2%;
+}
+
+/*问答列表*/
+.question-right {
+    float: right;
+    width: 26%;
+    max-height: 650px;
+    padding: 0 15px;
+    background-color: #fff;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px #ddd;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .question-right {
+        width: 26.5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .question-right {
+        width: 29.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .question-right {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+.question-list {
+    padding: 5% 0;
+    border-top: 1px dashed #ccc;
+}
+
+@media screen and (max-width: 640px) {
+    .question-list {
+        padding: 3% 0;
+    }
+}
+
+.question-list li {
+    margin-bottom: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 640px) {
+    .question-list li {
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .question-list-title {
+        font-size: 1.4rem;
+    }
+}
+
+.question-list li.current a {
+    color: #a6a385;
+}
+
+.question-list li.current .vol-number {
+    display: block;
+    margin-bottom: 1%;
+}
+
+.question-list li.current .question-list-title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 991px) {
+    .question-list li.current .question-list-title {
+        font-size: 1.5rem;
+    }
+}
+
+.question-list li a {
+    transition: color .3s;
+}
+
+.question-list li a:hover {
+    color: #a6a385;
+}
+
+/*end 问答列表*/
+
+/*提交问题*/
+.ask-question {
+    width: 71%;
+    margin-top: 3%;
+    padding: 2% 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #ddd;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .ask-question {
+        width: 68%;
+        margin-top: 2.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .ask-question {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+.einstein-say {
+    margin-bottom: 4%;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 991px) {
+    .einstein-say {
+        font-size: 1.4rem;
+    }
+}
+
+.einstein-say i {
+    margin-right: 5px;
+}
+
+.user-profile {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+}
+
+.user-profile img {
+    width: 100%;
+}
+
+.question-input {
+    float: right;
+    width: calc(100% - 55px);
+    height: 40px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    letter-spacing: .05rem;
+    box-sizing: border-box;
+}
+
+.question-input::-webkit-input-placeholder {
+    color: #969696;
+}
+
+.question-input::-moz-placeholder {
+    color: #969696;
+}
+
+.question-input:-moz-placeholder {
+    color: #969696;
+}
+
+.question-input:-ms-input-placeholder {
+    color: #969696;
+}
+
+.question-textarea {
+    margin: 3% 0 4% 0;
+    width: 100%;
+    height: 120px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    text-align: justify;
+    letter-spacing: .05rem;
+    box-sizing: border-box;
+}
+
+.question-textarea::-webkit-input-placeholder {
+    color: #969696;
+}
+
+.question-textarea::-moz-placeholder {
+    color: #969696;
+}
+
+.question-textarea:-moz-placeholder {
+    color: #969696;
+}
+
+.question-textarea:-ms-input-placeholder {
+    color: #969696;
+}
+
+@media screen and (max-width: 991px) {
+    .question-input, .question-textarea {
+        font-size: 1.4rem;
+    }
+}
+
+.btn-submit-question {
+    display: block;
+    margin: 0 auto 3% auto;
+    height: 41px;
+    padding: 0 6%;
+    border: none;
+    background-color: #e3ce07;
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn-submit-question:hover {
+    background-color: #a6a385;
+}
+
+@media screen and (max-width: 991px) {
+    .btn-submit-question {
+        height: 37px;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-submit-question {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .btn-submit-question {
+        height: 33px;
+        font-size: 1.4rem;
+    }
+}
+
+/*end 提交问题*/
+/*end 问答*/
