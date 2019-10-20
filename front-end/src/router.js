@@ -99,14 +99,23 @@ const router = new Router({
             }, {
                 path: '/me',
                 name: 'me',
+                meta: {
+                    login_required: true
+                },
                 component: UserCenter
             }, {
                 path: '/editme',
                 name: 'editme',
+                meta: {
+                    login_required: true
+                },
                 component: EditUserInfo
             }, {
                 path: '/editpwd',
                 name: 'editpwd',
+                meta: {
+                    login_required: true
+                },
                 component: EditPwd,
             }]
         },
@@ -119,15 +128,15 @@ router.beforeEach((to, from, next) => {
         localStorage.removeItem('token');
     }
     const token = localStorage.getItem('token');
-    if (!token && to.path === '/me') {
-        next({path: '/login'});
-    } else if (!token && to.path === '/editme') {
-        next({path: '/login'});
-    } else if (!token && to.path === '/editpwd') {
-        next({path: '/login'});
+
+    if (!token && to.matched.some(function (item) {
+        return item.meta.login_required;
+    })) {
+        next('/login');
     } else {
         next();
     }
+
 });
 
 export default router;
